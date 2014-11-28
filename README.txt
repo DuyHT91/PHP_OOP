@@ -2,7 +2,7 @@ PHP_OOP
 =======
 
 == Description ==
-This project is for learning purpose and improve my little knowlege about OOP with PHP
+This project is for learning purpose and improve my knowlege about OOP with PHP
 
 == References ==
 http://www.phpro.org/tutorials/Object-Oriented-Programming-with-PHP.html
