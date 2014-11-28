@@ -19,7 +19,13 @@ class Payment
     protected $userId;
     protected $paymentMethod;
 
-
+    /**
+     * @desc    Bind data to process transaction
+     * @param   str $amount
+     * @param   str $currency
+     * @param   str $userId
+     * @param   str $paymentMethod
+     */
     public function makePayment ( $amount, $currency, $userId, $paymentMethod ) {
         $this->amount = $amount;
         $this->currency = $currency;
@@ -27,6 +33,10 @@ class Payment
         $this->paymentMethod = $paymentMethod;
     }
 
+    /**
+     * @desc    Bind data to the payment transaction
+     * @param   int $rate
+     */
     public function setTransaction ( $rate ) {
         $amount = $this->amount;
         $commissionAmount = $amount * ( 1 + $rate / 100 );
@@ -45,6 +55,10 @@ class Payment
         $log->logTransaction($this->userId, $this->amount, $this->currency, $this->paymentMethod, __FUNCTION__);
     }
 
+    /**
+     * @desc    Return all transactions made by the user
+     * @param   str $userID
+     */
     public function getTransaction ( $userID ) {
         if ( $this->userId == $userID ) {
             $log = new Log();
@@ -53,6 +67,11 @@ class Payment
         }
     }
 
+    /**
+     * @desc    Return all transactions of a method made by the user
+     * @param   str $userId
+     * @param   str $method
+     */
     public function getTransactionByMethod ( $userID, $method ) {
         if ( $userID == $this->userId ) {
             foreach ( $this->transactionDetail as $key => $value ) {
