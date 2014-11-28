@@ -4,6 +4,11 @@ PHP_OOP
 == Description ==
 This project is for learning purpose and improve my little knowlege about OOP with PHP
 
+== References ==
+http://www.phpro.org/tutorials/Object-Oriented-Programming-with-PHP.html
+http://www.tutorialspoint.com/php/php_object_oriented.htm
+http://www.htmlgoodies.com/beyond/php/article.php/3909681
+
 == The Task ==
 You should implement classes to describe following entities and relations between them (you should implement only basic business logic):
 User
